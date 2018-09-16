@@ -30,7 +30,12 @@ where most people get their first choice but some get their third choice, and a
 scenario where about half get their first choice and half get their second
 choice.
 
+# Dependencies
+
+You will need to install `networkx`, perhaps with this command
+
+    pip install networkx
+
 # Acknowledgements
 
 The code is mostly not mine but is taken from https://stackoverflow.com/questions/21317213/sorting-people-into-groups-based-on-votes
-
