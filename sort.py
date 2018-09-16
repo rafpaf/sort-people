@@ -1,5 +1,3 @@
-# code taken mostly from https://stackoverflow.com/questions/21317213/sorting-people-into-groups-based-on-votes
-
 import networkx as nx
 import csv
 import sys

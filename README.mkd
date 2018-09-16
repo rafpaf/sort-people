@@ -1,0 +1,30 @@
+# Usage
+
+Put people's preferences in prefs.csv, which might look like this:
+
+    Alice,group1,group2,group3
+    Bob,group1,group3,group2
+    Charlie,group1,group2,group3
+
+Put the maximum sizes of the groups in capacities.csv, which might look like this:
+
+    group1,2
+    group2,3
+    group3,4
+
+Then run this script like so:
+
+    python assign.py prefs.csv capacities.csv -100,50,100,200
+
+The numbers indicate the "costs" of assigning non-first choices as the third
+parameter, e.g. -100,50,100,200 means that first choices have a negative cost
+of -100, and the costs of assigning second, third and fourth choices are 50,
+100, and 200 respectively. By playing with these numbers you can, for example,
+choose between a scenario where most people get their first choice but some get
+their third choice, and a scenario where about half get their first choice and
+half get their second choice.
+
+# Acknowledgements
+
+The code is mostly not mine but is taken from https://stackoverflow.com/questions/21317213/sorting-people-into-groups-based-on-votes
+
