@@ -45,12 +45,7 @@ A=[]
 for person,projectlist in prefs.items():
     G.add_node(person,demand=-1)
     for i,project in enumerate(projectlist):
-        if i==0:
-            cost=-100 # happy to assign first choices
-        elif i==1:
-            cost=-60 # slightly unhappy to assign second choices
-        else:
-            cost=-30 # very unhappy to assign third choices
+        cost = costs[i]
         G.add_edge(person,project,capacity=1,weight=cost) # Edge taken if person does this project
 
 for project,c in capacities.items():
