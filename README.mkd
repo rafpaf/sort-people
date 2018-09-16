@@ -1,4 +1,4 @@
-# Usage
+# How to use this
 
 Put people's preferences in prefs.csv, which might look like this:
 
@@ -6,7 +6,11 @@ Put people's preferences in prefs.csv, which might look like this:
     Bob,group1,group3,group2
     Charlie,group1,group2,group3
 
-Put the maximum sizes of the groups in capacities.csv, which might look like this:
+This means that Alice put group1 as her first choice, group2 as her second
+choice, and so on.
+
+How big can the groups get? Write that in capacities.csv, which might look like
+this:
 
     group1,2
     group2,3
