@@ -14,15 +14,17 @@ Put the maximum sizes of the groups in capacities.csv, which might look like thi
 
 Then run this script like so:
 
-    python assign.py prefs.csv capacities.csv -100,50,100,200
+    python sort.py prefs.csv capacities.csv -100,50,100,200
 
-The numbers indicate the "costs" of assigning non-first choices as the third
-parameter, e.g. -100,50,100,200 means that first choices have a negative cost
-of -100, and the costs of assigning second, third and fourth choices are 50,
-100, and 200 respectively. By playing with these numbers you can, for example,
-choose between a scenario where most people get their first choice but some get
-their third choice, and a scenario where about half get their first choice and
-half get their second choice.
+The numbers shown here mean that assigning first choices is good (it has a
+"negative cost of -100"), assigning second choices is slightly bad (it has a
+cost of 50), assigning third choices is worse (cost of 100), and assigning
+fourth choices is really bad (cost of 200).
+
+By playing with these numbers you can, for example, choose between a scenario
+where most people get their first choice but some get their third choice, and a
+scenario where about half get their first choice and half get their second
+choice.
 
 # Acknowledgements
 
