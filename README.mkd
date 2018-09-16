@@ -32,7 +32,7 @@ choice.
 
 # Dependencies
 
-You will need to install `networkx`, perhaps with this command
+You will need to install `networkx`, perhaps with this command:
 
     pip install networkx
 
