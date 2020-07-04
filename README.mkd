@@ -1,6 +1,8 @@
+When running an event or teaching a class, you might need to divvy people up into groups. Ask them which group they'd like to be put in. Then, use this script to divvy them up in a way that satisfies everyone's preferences as much as possible.
+
 # How to use this
 
-Put people's preferences in prefs.csv, which might look like this:
+Put everyone's preferences in prefs.csv. Here's an example of what that might look like:
 
     Alice,group1,group2,group3
     Bob,group1,group3,group2
@@ -9,21 +11,20 @@ Put people's preferences in prefs.csv, which might look like this:
 This means that Alice put group1 as her first choice, group2 as her second
 choice, and so on.
 
-How big can the groups get? Write that in capacities.csv, which might look like
-this:
+How big can the groups get? Write that in capacities.csv. For example:
 
     group1,2
     group2,3
     group3,4
 
-Then run this script like so:
+To run the script:
 
     python sort.py prefs.csv capacities.csv -100,50,100,200
 
-The numbers shown here mean that assigning first choices is good (it has a
-"negative cost of -100"), assigning second choices is slightly bad (it has a
-cost of 50), assigning third choices is worse (cost of 100), and assigning
-fourth choices is really bad (cost of 200).
+The numbers shown here mean that giving someone their first choice is good (it has a
+"negative cost" of -100), giving someone their second choice is slightly bad (it has a
+cost of 50), giving someone their third choice is worse (it has a cost of 100), and giving
+someone their fourth choice is really bad (cost of 200).
 
 By playing with these numbers you can, for example, choose between a scenario
 where most people get their first choice but some get their third choice, and a
@@ -32,7 +33,7 @@ choice.
 
 # Dependencies
 
-You will need to install `networkx`, perhaps with this command:
+You'll need to install `networkx`:
 
     pip install networkx
 
